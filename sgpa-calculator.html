@@ -67,7 +67,9 @@
         <label for="semester">Select Semester:</label>
         <select id="semester"></select>
 
-        <button onclick="goToSubjectsPage()">Next</button>
+        <button onclick="goToSubjectsPage()">Next</button> 
+        <!-- goToSubjectsPage function is defined in the sgpa-calculator.js file but isn't accessible globally. By default, JavaScript functions defined inside a module (type="module") aren't added to the global scope. 
+        Fix: 1. Explicitly attach the function to the window object 2.Bind the event listener using JavaScript (use addEventListener in js file istead of using onClick here) -->
     </div>
 </body>
 

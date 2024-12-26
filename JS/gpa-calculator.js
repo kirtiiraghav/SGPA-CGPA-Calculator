@@ -57,6 +57,9 @@ function goToSubjectsPage() {
     window.location.href = "subjects.html";
 }
 
+// Attach the function to the global scope
+window.goToSubjectsPage = goToSubjectsPage;
+
 function populateSubjects() {
     let regulation = localStorage.getItem("selectedRegulation");
     let course = localStorage.getItem("selectedCourse");
@@ -105,11 +108,11 @@ function calculateGPA() {
 
     let gpa = totalGradePoints / totalCredits;
     let ele = document.getElementById("result")
-    ele.innerHTML = `<span>Your GPA:</span> ${gpa.toFixed(3)}`;
+    ele.innerHTML = `<span>Your SGPA:</span> ${gpa.toFixed(2)}`;
     ele.scrollIntoView();
 }
 
-
+document.querySelector('#calculate-sgpa-button').addEventListener('click', calculateGPA)
 
 // Check if the current page is the main page (gpa-calculator.html)
 if (window.location.pathname.includes("gpa-calculator")) {
