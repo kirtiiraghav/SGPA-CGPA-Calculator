@@ -73,10 +73,6 @@ function populateSubjects() {
 
         label.textContent = subjectObj.subject + " (" + subjectObj.credit + ")";
 
-
-
-
-
         let select = document.createElement("select");
         for (let grade in grades) {
             let option = document.createElement("option");
@@ -111,11 +107,11 @@ function calculateGPA() {
     ele.innerHTML = `<span>Your SGPA:</span> ${gpa.toFixed(2)}`;
     ele.scrollIntoView();
 }
-
-document.querySelector('#calculate-sgpa-button').addEventListener('click', calculateGPA)
+window.calculateGPA = calculateGPA
+// document.querySelector('#calculate-sgpa-button').addEventListener('click', calculateGPA)
 
 // Check if the current page is the main page (gpa-calculator.html)
-if (window.location.pathname.includes("gpa-calculator")) {
+if (window.location.pathname.includes("sgpa-calculator")) {
     updateCourses();
 }
 
