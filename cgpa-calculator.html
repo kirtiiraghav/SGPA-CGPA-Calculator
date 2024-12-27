@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/cgpa-calculator.css">
+
+    <script src="JS/main.js" defer></script>
+    <script src="JS/cgpa-calculator.js" defer></script>
+
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <i class="bx bx-menu menu-icon"></i>
+            <span class="logo-name" id="heading">VTU CGPA CALCULATOR</span>
+        </div>
+        <div class="sidebar">
+            <div class="logo">
+                <i class="bx bx-menu menu-icon"></i>
+                <span class="logo-name">Menu</span>
+            </div>
+
+            <div class="sidebar-content">
+                <ul class="lists">
+                    <li class="list">
+                        <a href="index.html" class="nav-link" id="home">
+                            <i class="bx bx-home-alt icon"></i>
+                            <span class="link">Home</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="sgpa-calculator.html" class="nav-link" id="gpa-calculator">
+                            <i class='bx bxs-calculator icon'></i>
+                            <span class="link">GPA Calculator</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="cgpa-calculator.html" class="nav-link" id="cgpa-calculator">
+                            <i class='bx bx-calculator icon'></i>
+                            <span class="link">CGPA Calculator</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="overlay"></section>
+
+    <div class="container">
+        <div>
+            <label for="regulation">Select Regulation:</label>
+            <select id="regulation">
+                <option value="2018">2018</option>
+                <option value="2021">2021</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="course">Select Course:</label>
+            <select id="course">
+                <!-- The course options will be dynamically filled based on the selected regulation -->
+            </select>
+        </div>
+
+        <div class="semester-input">
+            <label for="semester1">Semester 1 GPA:</label>
+            <input type="number" id="semester1" step="0.01" min="0" max="10" required>
+        </div>
+
+        <div id="additional-semesters">
+            <!-- Additional semester inputs will be added here -->
+        </div>
+
+        <button onclick="addSemester()">Add Another Semester</button>
+        <button onclick="removeSemester()">Remove Last Semester</button>
+        <button onclick="calculateCGPA()">Calculate CGPA</button>
+
+        <div class="result">
+            <p>Your CGPA: <span id="cgpa">N/A</span></p>
+            <br><br>
+        </div>
+    </div>
+</body>
+
+</html>
