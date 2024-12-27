@@ -1,0 +1,133 @@
+:root {
+    --input-background: #f7f9fa;
+    --border-color: #d4dce0;
+    --background-color: #f7f7f7;
+    --secondary-background-color: #e2e8f0;
+    --primary-color: #2c7a7b;
+    --hover-primary-color: #38b2ac;
+    --text-color: #333;
+}
+
+body {
+    background: linear-gradient(to right, var(--background-color), var(--secondary-background-color));
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 100%;
+    width: 50%;
+    background-color: #fff;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding-top: 2rem;
+    overflow-y: auto;
+    margin: 24px auto;
+    text-align: center;
+}
+
+label {
+    margin-inline: 8px;
+    font-weight: 100;
+    display: block;
+    align-items: center;
+    font-size: 1rem;
+}
+
+input[type="number"],
+select {
+    margin-inline: 8px;
+    margin-bottom: 6%;
+    width: 300px;
+    padding: 4px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--input-background);
+    font-size: 125%;
+    color: var(--text-color);
+    transition: border-color 0.3s;
+    align-items: center !important;
+    border: 1px solid grey;
+}
+
+select:hover {
+    transform: scale(1.02);
+    border-color: #090A0F;
+}
+
+input[type="number"] {
+    margin-bottom: 6%;
+    padding: 4px;
+    font-size: 125%;
+}
+
+select:hover,
+input[type="number"]:hover {
+    transform: scale(1.02);
+    border-color: #090A0F;
+}
+
+input[type="number"]:focus,
+select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+button {
+    margin: 12px auto;
+    display: block;
+    width: 222px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:last-child {
+    margin-right: 0;
+}
+
+button:hover {
+    background-color: var(--hover-primary-color);
+}
+
+#cgpa {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center !important;
+    margin-top: 1rem;
+
+}
+
+.result {
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    label,
+    input[type="number"],
+    select,
+    #cgpa {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    button {
+        margin: 10px auto;
+    }
+}
