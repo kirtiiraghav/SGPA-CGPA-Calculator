@@ -20,7 +20,11 @@ This tool supports VTU regulations for the years 2018 and 2021 and allows users 
 - **CSS:** Styling for a responsive and user-friendly interface.
 - **JavaScript:** Handling dynamic behavior (semester addition/removal, CGPA calculation, course selection).
 - **Boxicons:** For icons in the navigation menu.
-  
+
+## Demo
+
+Check out the live demo [here](https://vtu-sgpa-cgpa-calculator.netlify.app/).
+
 ## How to Use
 
 1. **Select Regulation:** Choose between VTU regulations 2018 or 2021.
