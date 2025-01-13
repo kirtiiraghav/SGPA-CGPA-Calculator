@@ -59,6 +59,8 @@ function goToSubjectsPage() {
 
 // Attach the function to the global scope
 window.goToSubjectsPage = goToSubjectsPage;
+window.updateCourses = updateCourses;
+window.updateSemesters = updateSemesters
 
 function populateSubjects() {
     let regulation = localStorage.getItem("selectedRegulation");
